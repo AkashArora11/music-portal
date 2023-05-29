@@ -1,0 +1,49 @@
+{% extends 'music_app/base.html' %}
+{% block content %}
+
+<h2>Upload Music File</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <br><br>
+
+    <label for="file">Music File:</label>
+    <input type="file" id="file" name="file" required>
+
+    <br><br>
+
+    <label for="upload_type">Access:</label>
+    <select id="upload_type" name="upload_type">
+        <option value="public">Public</option>
+        <option value="private">Private</option>
+        <option value="protected">Protected</option>
+    </select>
+
+    <br><br>
+
+    <div id="allowed-emails-container" style="display: none;">
+        <label for="allowed-emails">Allowed Emails:</label>
+        <input type="email" id="allowed-emails" name="allowed_emails[]" multiple>
+    </div>
+
+    <br><br>
+
+    <input type="submit" value="Upload">
+</form>
+
+<script>
+    document.getElementById('upload_type').addEventListener('change', function () {
+        var selectedOption = this.value;
+        var allowedEmailsContainer = document.getElementById('allowed-emails-container');
+
+        if (selectedOption === 'protected') {
+            allowedEmailsContainer.style.display = 'block';
+        } else {
+            allowedEmailsContainer.style.display = 'none';
+        }
+    });
+</script>
+{% endblock %}

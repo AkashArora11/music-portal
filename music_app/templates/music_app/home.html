@@ -1,0 +1,27 @@
+{% extends 'music_app/base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<h2>Welcome, {{ user.username|title }}!</h2>
+{% else %}
+<h2>Please, Login to Share the Music!</h2>
+{% endif %}
+
+{% for music_file in music_files %}
+<div class="music-file">
+    {% if music_file.access != 'private' %}
+    <ul class="music-box">
+        <li><b>&#9835; {{ music_file.title }} | <i class='fa fa-user-circle'></i> {{ music_file.user.username|title }} |
+                &#128065; {{ music_file.upload_type|title }} File
+            </b></li>
+        <audio controls preload="metadata">
+            <source src="{{ music_file.file.url }}" type="audio/mp3">
+            Your browser does not support the HTML5 Audio! 😢
+        </audio>
+    </ul>
+    {% else %}
+    <p>No music files uploaded yet.</p>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}

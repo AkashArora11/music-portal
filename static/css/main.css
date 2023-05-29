@@ -1,0 +1,132 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212112;
+}
+
+h1 {
+    line-height: 1.0;
+    font-weight: 700;
+    color: #212112;
+    text-align: left;
+    margin: 25px;
+}
+
+h2 {
+    line-height: 1.0;
+    font-weight: 300;
+    color: #212112;
+    text-align: left;
+    margin: 25px;
+    padding: 8px;
+}
+
+.register {
+    text-align: left;
+    margin: 25px;
+    padding: 8px;
+}
+
+hr {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    background-color: #4c7aaf;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #5fc931;
+}
+
+.button-lgut {
+    background-color: #4c7aaf;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-lgut:hover {
+    background-color: #dd462e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.music-box {
+    display: list-item;
+    align-items: center;
+    list-style: disc;
+    gap: 6.5rem;
+    line-height: 35px;
+}
+
+.top {
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    gap: 3rem;
+    padding: 0dvb;
+}
+
+form {
+    margin: 25px;
+    padding: 8px;
+}
+
+label {
+    padding-top: 10px !important;
+}
+
+audio:hover,
+audio:focus,
+audio:active {
+    -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
+audio {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -moz-box-shadow: 2px 2px 4px 0px #006773;
+    -webkit-box-shadow: 2px 2px 4px 0px #006773;
+    box-shadow: 2px 2px 4px 0px #006773;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+}
